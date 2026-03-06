@@ -14,7 +14,6 @@
         <swagger-annotations-versions>2.2.44</swagger-annotations-versions>
         <spring-boot.version>3.5.11</spring-boot.version>
         <springdoc-openapi-starter.version>2.8.16</springdoc-openapi-starter.version>
-        <lombok.version>1.18.42</lombok.version>
         <maven.compiler.version>3.15.0</maven.compiler.version>
         <swagger-core-jakarta.version>2.2.44</swagger-core-jakarta.version>
 
@@ -22,13 +21,6 @@
 
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -107,13 +99,6 @@
                 <version>${maven.compiler.version}</version>
                 <configuration>
                     <release>${java.version}</release>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </path>
-                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
         </plugins>

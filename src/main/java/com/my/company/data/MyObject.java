@@ -1,22 +1,14 @@
 package com.my.company.data;
 
 import jakarta.annotation.Nullable;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 
 import java.io.Serializable;
 
-@Data
-@AllArgsConstructor
-public class MyObject implements Serializable {
+public record MyObject(
+        @Nullable AmbiguousObject ambiguousObjectNullable,
+        AmbiguousObject ambiguousObjectNonNull,
 
-    @Nullable
-    private AmbiguousObject ambiguousObjectNullable;
+        @Nullable NullableObject nestedNullableObject,
 
-    private AmbiguousObject ambiguousObjectNonNull;
-
-    @Nullable
-    private NullableObject nestedNullableObject;
-
-    private NonNullableObject nestedNonNullableObject;
-}
+        NonNullableObject nestedNonNullableObject)
+        implements Serializable {}
